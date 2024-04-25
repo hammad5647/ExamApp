@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/nameBar"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#00A0FF"
+        android:elevation="2dp">
+
+        <TextView
+            android:id="@+id/invoiceTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_weight="5"
+            android:text="Invoice Maker"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginRight="30dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/baseline_menu_24"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/background1"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+
+        android:background="@drawable/backgroundshape"
+        android:elevation="5dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/myImageViewIcon"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/usericon" />
+
+        <RelativeLayout
+            android:id="@+id/storeNameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/myImageViewIcon">
+
+            <TextView
+                android:id="@+id/myStoreTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="My_Store"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/myStoreTxt"
+                android:layout_marginLeft="10dp"
+                android:letterSpacing="0.10"
+                android:layout_marginTop="10dp"
+                android:text="Groceries"
+                android:textColor="@color/grey"
+                android:textSize="20dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toEndOf="@id/storeNameTxt"
+
+            >
+
+            <TextView
+                android:id="@+id/invoiceNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="0"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/invoiceNumber"
+                android:text="Invoices"
+                android:textSize="16sp" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/background2"
+        android:layout_width="350dp"
+        android:layout_height="90dp"
+        android:layout_below="@id/background1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/backgroundshape"
+        android:elevation="5dp">
+
+
+        <RelativeLayout
+            android:id="@+id/customerInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            >
+
+            <TextView
+                android:textFontWeight="10"
+                android:id="@+id/customerName1"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                android:hint="No Invoice Added Yet"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/addBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toEndOf="@id/customerName1"
+            android:text="Add +"
+            android:textSize="20dp"
+            android:backgroundTint="#2196F3"
+            android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>
