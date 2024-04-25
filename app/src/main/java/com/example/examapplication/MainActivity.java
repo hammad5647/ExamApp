@@ -2,6 +2,7 @@ package com.example.examapplication;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        id_Binding();
         getOnBackPressedDispatcher().addCallback(MainActivity.this, new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
@@ -39,7 +40,8 @@ public class MainActivity extends AppCompatActivity {
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addInvoice();
+                Intent intent = new Intent(MainActivity.this, CustomerInputActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -58,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         builder.setNegativeButton("No", null);
         AlertDialog dialog = builder.create();
         dialog.show();
+
     }
 
     void id_Binding() {
@@ -70,19 +73,5 @@ public class MainActivity extends AppCompatActivity {
         productName = findViewById(R.id.productName);
         productRate = findViewById(R.id.productRate);
         productQuantity = findViewById(R.id.productQuantity);
-
-    }
-
-    void addInvoice() {
-        Dialog dialog = new Dialog(MainActivity.this);
-        dialog.setContentView(R.layout.addinvoice);
-        dialog.show();
-
-        addBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String customer_name = customerName
-            }
-        });
     }
 }
